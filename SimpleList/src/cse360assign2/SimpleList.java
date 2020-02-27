@@ -16,6 +16,7 @@ public class SimpleList {
 	
 	public void add(int num) {
 		int temp;
+		int increase = (int) 0.5*list.length;
 		for (int i=0; i<list.length; i++) {
 			count++;
 		}
@@ -24,6 +25,8 @@ public class SimpleList {
 			for (int i=0; i<list.length-1; i++) {
 				list[i]=list[i-1];
 			}
+			int length= list.length+increase;
+			count++;
 		}
 		else {
 			temp = list[list.length-1];
