@@ -74,6 +74,8 @@ public class SimpleList {
 	}
 	
 	public int first() {
+		if(count==0)
+			return -1;
 		return list[0];
 	}
 	
