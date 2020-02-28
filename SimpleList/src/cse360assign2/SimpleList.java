@@ -2,6 +2,7 @@
  * Varun Chandra
  * CSE 360
  * ID: 1214474794
+ * Repository URL: https://github.com/watergod99/SimpleList
  */
 package cse360assign2;
 public class SimpleList {
@@ -60,5 +61,34 @@ public class SimpleList {
 			}
 		}
 		return -1;
+	}
+	
+	public void append(int num) {
+		int increase = (int) 0.5*list.length;
+		int newLength = 0;
+		list[list.length-1] = num;
+		if(count()==list.length) {
+			newLength = list.length + increase;
+		}
+		count++;
+	}
+	
+	public int first() {
+		return list[0];
+	}
+	
+	public int last() {
+		if(count==0)
+			return -1;
+		return list[list.length-1];
+	}
+	
+	public int size() {
+		int size = 0;
+		for(int i=0; i<list.length; i++) {
+			if(list[i]==0) 
+					size++;			
+		}
+		return size;
 	}
 }//end of class
